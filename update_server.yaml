@@ -1,0 +1,19 @@
+---
+- name: upload code and Start the service
+  hosts: all
+  vars:
+    - app: httpd
+
+  tasks:
+  - name: copy web file
+    copy:
+      src: /var/lib/jenkins/web_update/index.html
+      dest: /var/www/html/index.html
+    become: true
+
+  - name: Start appache service
+    service:
+      name: httpd
+      state: restart
+      enabled: yes
+      become: true
