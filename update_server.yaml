@@ -14,6 +14,6 @@
   - name: Start appache service
     service:
       name: httpd
-      state: restart
+      state: restarted
       enabled: yes
       become: true
