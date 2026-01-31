@@ -7,7 +7,7 @@
   tasks:
   - name: copy web file
     copy:
-      src: /var/lib/jenkins/web_update/index.html
+      src: /var/lib/jenkins/workspace/web_update/index.html
       dest: /var/www/html/index.html
     become: true
 
