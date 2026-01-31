@@ -12,8 +12,9 @@
     become: true
 
   - name: Start appache service
+    become: yes
     service:
       name: httpd
       state: restarted
       enabled: yes
-      become: true
+      
