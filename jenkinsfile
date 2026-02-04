@@ -1,0 +1,25 @@
+pipeline {
+  any agent
+  stages {
+    stage("checkout"){
+      step {
+        git 
+      }
+    }
+  stage("build"){
+    step{
+      echo "Build release files."
+      }
+  }
+  stage("test"){
+    step{
+      echo "Test the release objects."
+    }
+  }
+  stage("deploy"){
+    step{
+      echo "Deploy release objects."
+    }
+  }
+}
+}
